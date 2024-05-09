@@ -1,17 +1,13 @@
 import "./style.css";
+import renderHome from "./home";
+import renderMenu from './menu';
+import renderContact from './contact';
 
-const content = document.querySelector("#content");
+const homeBtn = document.querySelector("#home");
+const menuBtn = document.querySelector("#menu");
+const contactBtn = document.querySelector("#contact");
 
-const homeContainer = document.createElement("div");
-homeContainer.classList.add("home-container");
-
-const p = document.createElement("p");
-p.innerText = 
-`Welcome to Smoker Palace, your ultimate Minecraft-themed dining experience!
-Immerse yourself in the blocky world of Minecraft while savoring delectable dishes.
-Our restaurant is a tribute to the game's Smoker block.
-Just like in Minecraft, we strive for resourcefulness and creativity in our kitchen, using only the freshest ingredients to craft meals that fuel your adventure.
-`;
-
-homeContainer.appendChild(p);
-content.appendChild(homeContainer)
+window.addEventListener("load",renderHome);
+homeBtn.addEventListener("click",renderHome);
+menuBtn.addEventListener("click",renderMenu);
+contactBtn.addEventListener("click",renderContact);
