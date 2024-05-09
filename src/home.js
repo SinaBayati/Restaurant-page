@@ -1,3 +1,5 @@
+import smokerSrc from "./assets/smoker.png";
+
 export default function(){
   const content = document.querySelector("#content");
   content.innerHTML = null;
@@ -9,8 +11,11 @@ export default function(){
   p.innerText = 
   `Welcome to Smoker Palace, the best restaurant in all 3 dimensions!
   We provide the best food for the least amount of emeralds!`;
+
+  const img = new Image();
+  img.src = smokerSrc;
   
-  homeContainer.appendChild(p);
+  homeContainer.append(p,img);
 
   content.appendChild(homeContainer);
 };

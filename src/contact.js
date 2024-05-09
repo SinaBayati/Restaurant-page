@@ -4,5 +4,5 @@ export default function(){
 
   // render contact section code
 
-  content.appendChild(homeContainer);
+  content.appendChild(contactContainer);
 };
