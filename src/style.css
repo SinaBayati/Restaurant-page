@@ -118,6 +118,21 @@ nav button:active{
   width: 100px;
 }
 
+.contact-container{
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  letter-spacing: 2px;
+  padding: 12rem 2rem;
+}
+
+.contact-container p{
+  text-align: center;
+}
+
 footer{
   background-color: var(--black);
   color: var(--white);
@@ -126,4 +141,10 @@ footer{
   word-spacing: 2rem;
   font-size: 2rem;
   letter-spacing: .5rem;
+}
+
+footer a{
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--white);
 }
