@@ -67,6 +67,10 @@ nav button:active{
   color: var(--white);
 }
 
+nav button.active{
+  color: var(--white);
+}
+
 #content{
   background-color: var(--gray);
 }

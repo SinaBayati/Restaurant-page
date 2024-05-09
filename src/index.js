@@ -7,7 +7,29 @@ const homeBtn = document.querySelector("#home");
 const menuBtn = document.querySelector("#menu");
 const contactBtn = document.querySelector("#contact");
 
-window.addEventListener("load",renderHome);
-homeBtn.addEventListener("click",renderHome);
-menuBtn.addEventListener("click",renderMenu);
-contactBtn.addEventListener("click",renderContact);
+function setActive(btn){
+  homeBtn.classList.remove("active");
+  menuBtn.classList.remove("active");
+  contactBtn.classList.remove("active");
+
+  btn.classList.add("active");
+}
+
+window.addEventListener("load",function(){
+  menuBtn.classList.remove("active");
+  contactBtn.classList.remove("active");
+  homeBtn.classList.add("active");
+  renderHome();
+});
+homeBtn.addEventListener("click",function(e){
+  setActive(e.target);
+  renderHome();
+});
+menuBtn.addEventListener("click",function(e){
+  setActive(e.target);
+  renderMenu();
+});
+contactBtn.addEventListener("click",function(e){
+  setActive(e.target);
+  renderContact();
+});
